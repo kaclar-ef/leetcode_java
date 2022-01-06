@@ -7,6 +7,8 @@
 // @lc code=start
 class Solution {
     public int romanToInt(String s) {
+//    Your runtime beats 5.18 % of java submissions
+//    Your memory usage beats 5.06 % of java submissions (51.8 MB)
       int ans = 0;
       s = s.replaceFirst("IV", "IIII");
       s = s.replaceFirst("IX", "VIIII");
