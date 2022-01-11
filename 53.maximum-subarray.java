@@ -11,12 +11,10 @@
 // Your memory usage beats 71.87 % of java submissions (49.2 MB)
 class Solution {
     public int maxSubArray(int[] nums) {
-        // 右隣を足して、マイナスになったら破棄する感じ？
-        // １つの数だけで最大になる可能性もあるし
-        int currentSum = 0;
+        int currentSum = nums[0];
         int maxSum = nums[0];
 
-        for (int num : nums) {
+        for (int i = 1; i < nums.length; i++) {
           currentSum += num;
           if (currentSum > maxSum) {
             maxSum = currentSum;
